@@ -1,0 +1,15 @@
+import java.math.BigInteger;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s=new Scanner(System.in);
+	    String s1=s.nextLine();
+	    String s2=s.nextLine();
+	BigInteger n1=new BigInteger(s1);
+		BigInteger n2=new BigInteger(s2);
+		BigInteger n=n2.gcd(n1);
+		System.out.println(n);
+}
+}
+
