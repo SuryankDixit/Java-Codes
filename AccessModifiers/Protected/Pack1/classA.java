@@ -47,3 +47,7 @@ class Main extends A{
         obj2.f1();
     }
 }
+
+
+// Protected = <default> + can access other packages only inside child classes.
+// We must(have to) use child class reference in child class to access parent’s protected members.
