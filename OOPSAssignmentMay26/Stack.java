@@ -48,13 +48,19 @@ public class Stack {
     int capacity(){
         return top+1;
     }
+
+    void isSizeEqual(Stack stack2){
+        if(this.capacity() == stack2.capacity()){
+            System.out.println("The Number of Stack in Stack1 : "+stack2.capacity()+"\nThe Number of Stack in Stack2 : "+stack2.capacity());
+        }
+    }
 }
 
 
 class UserProgram{
     public static void main(String[] args) {
-        Stack stack1 = new Stack(2);
-        Stack stack2 = new Stack(2);
+        Stack stack1 = new Stack(10);
+        Stack stack2 = new Stack(10);
         Scanner input = new Scanner(System.in);
         while(true){
             System.out.println("Choose the stack to perform operations:\n\t1.stack1\n\t2.Stack2");
@@ -77,17 +83,13 @@ class UserProgram{
                         if(!status){
                             System.out.println("Stack is full.");
                         }
-                        if(stack1.capacity() == stack2.capacity()){
-                            System.out.println("The Number of Stack in Stack1 : "+stack1.capacity()+"\nThe Number of Stack in Stack2 : "+stack1.capacity());
-                        }
+                        stack1.isSizeEqual(stack2);
                         break;
                 case 2: int x = stack.pop();
                         if(x!=-1){
                             System.out.println("Popped Element: "+x);
                         }
-                        if(stack1.capacity() == stack2.capacity()){
-                            System.out.println("The Number of Stack in Stack1 : "+stack1.capacity()+"\nThe Number of Stack in Stack2 : "+stack1.capacity());
-                        }
+                        stack1.isSizeEqual(stack2);
                         break;
                 case 3: boolean isEmpty = stack.checkEmpty();
                         if(isEmpty){
