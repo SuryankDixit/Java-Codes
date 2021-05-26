@@ -6,7 +6,7 @@ import java.util.*;
 class Container<E>{
 
     public void print(E obj){
-        System.out.println(obj.getClass().getName());
+        System.out.println(obj);
     }
 }
 
@@ -34,6 +34,10 @@ class Student{
     Student(String mn, Integer r){
         name = mn;
         Rollno = r;
+    }
+    @Override
+    public String toString() {
+        return "Name: "+name+" RollNo: "+Rollno;
     }
 }
 
