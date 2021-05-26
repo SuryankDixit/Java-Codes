@@ -14,10 +14,13 @@ class Container<E>{
 // Now container2 will not support any other class other than Number classes.
 class Container2<E extends Number>{
 
+    // ? can be any subclass of E
     public void print(ArrayList<? extends E> obj){
         System.out.println(obj);
     }
 
+
+    // ? can be any super class of E
     public void print2(ArrayList<? super E> obj){
         System.out.println(obj);
     }
